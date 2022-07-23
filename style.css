@@ -1,0 +1,23 @@
+*{
+    margin:0;
+}
+.todo-bg{
+    background-color: #458f20;
+    padding-left: 10px;
+    padding-bottom: 10px;
+}
+.todo{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 24px;
+    color: #ccecb7;
+}
+.delete-btn{
+    background-color: rgb(213, 11, 11);
+    padding: 6px 8px;
+    border: 0;
+    border-radius: 6px;
+    font-size: 16px;
+    color: rgb(226, 225, 225);
+    font-weight: bold;
+}

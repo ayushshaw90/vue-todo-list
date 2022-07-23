@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/vue@3.0.2"></script>
+    <title>Vue-todo-list</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <div v-for="item in todos" class="todo-bg">
+            <h1 class="todo">{{item.todo}}</h1>
+            <button v-on:click="deleteTodo" v-bind:key="item.key" v-bind:id="item.key" class="delete-btn">Delete</button>
+        </div>
+        <hr>
+        <div>
+            <!-- Add todo  -->
+            <label for="newtodo">Enter your todo</label>
+            <input type="text" id="newtodo" v-bind:value="inputTodo">
+            <button>Add todo</button>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
