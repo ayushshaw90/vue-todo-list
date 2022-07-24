@@ -21,7 +21,7 @@
     }
 }
 .todo-bg{
-    background-color: #f1f5f9;
+    background-color: #d1d7db;
     padding-left: 10px;
     padding-bottom: 10px;
     padding-top: 10px;
@@ -79,4 +79,8 @@
 }
 .wrapper{
     padding: 30px 0px;
+}
+.full-wrapper{
+    background-color: #f5f5f4;
+    min-height: 100vh;
 }
