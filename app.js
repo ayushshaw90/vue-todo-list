@@ -20,6 +20,7 @@ Vue.createApp({
                     todo: this.inputTodo,
                     key: id
                 })
+                localStorage.setItem("todos", JSON.stringify({todos:this.todos}))
             }
         },
         deleteTodo(event) {
@@ -27,12 +28,22 @@ Vue.createApp({
             this.todos = this.todos.filter((e) => {
                 return (e.key) != (id);
             })
+            localStorage.setItem("todos", JSON.stringify({todos:this.todos}));
         },
         onSubmit(e){
             e.preventDefault()
             this.createNewTodo(this.inputTodo)
             this.inputTodo = ""
+        },
+        onLoadFunc(){
+            let data = localStorage.getItem("todos");
+            if(data){
+                this.todos = JSON.parse(data).todos
+            }
         }
+    },
+    created(){
+        this.onLoadFunc()
     }
 }).mount('#app')
 
