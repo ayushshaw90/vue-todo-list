@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,20 +9,32 @@
     <title>Vue-todo-list</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div id="app">
         <div v-for="item in todos" class="todo-bg">
             <h1 class="todo">{{item.todo}}</h1>
-            <button v-on:click="deleteTodo" v-bind:key="item.key" v-bind:id="item.key" class="delete-btn">Delete</button>
+            <button v-on:click="deleteTodo" v-bind:key="item.key" v-bind:id="item.key"
+                class="delete-btn">Delete</button>
         </div>
         <hr>
-        <div>
+        <div class="addtodo">
             <!-- Add todo  -->
-            <label for="newtodo">Enter your todo</label>
-            <input type="text" id="newtodo" v-bind:value="inputTodo">
-            <button>Add todo</button>
+            <form action="#">
+                <div class="newtodolabel">
+                    <label for="newtodo">Enter your todo</label>
+                </div>
+                <div>
+                    <input type="text" id="newtodo" v-bind:value="inputTodo">
+
+                </div>
+                <div class="btn-div">
+                    <button class="add-btn">Add todo</button>
+                </div>
+            </form>
         </div>
     </div>
     <script src="app.js"></script>
 </body>
+
 </html>
