@@ -30,7 +30,6 @@ Vue.createApp({
         },
         onSubmit(e){
             e.preventDefault()
-            console.log(e)
             this.createNewTodo(this.inputTodo)
             this.inputTodo = ""
         }
