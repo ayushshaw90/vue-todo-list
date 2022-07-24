@@ -3,10 +3,7 @@
 Vue.createApp({
     data() {
         return {
-            todos: [{
-                todo: "Lets do it",
-                key: "656131323svsvs"
-            }],
+            todos: [],
             inputTodo: ""
         }
     },
